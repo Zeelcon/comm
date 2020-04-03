@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'bbu',
+    'ccd',
+    'nmd',
     
     'django.contrib.admin',
     'django.contrib.auth',
