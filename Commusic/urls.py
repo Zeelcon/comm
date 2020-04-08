@@ -16,6 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from community import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #注册-登录-忘记密码
+    path('register', views.register, name='register_page'),
+    path('login', views.loginUser, name='login_page'),
+    path('logout', views.logoutUser, name='logout_page'),
+    path('forget', views.forget, name='forget_page'),
+    #首页-文章-用户信息
+    path('', views.home, name='home_page'),
+    path('article', views.article, name='article_page'),
+    path('users', views.users, name='users_page'),
+
+
 ]
